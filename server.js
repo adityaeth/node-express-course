@@ -37,7 +37,7 @@ app.post('/login', function (req, res) {
         res.json({
             success: true,
             message: 'username and password matched!',
-            token: 'encrypted token goes here';
+            token: 'encrypted token goes here'
         })
     } else {
         res.json({
