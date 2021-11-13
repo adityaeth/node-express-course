@@ -17,6 +17,14 @@ app.get('/users', function (req, res) {
     })
 })
 
+app.get('/test', (req, res) => {
+    console.log("Test is working fine");
+    res.json({
+        success: true,
+        message: "Test passed"
+    })
+})
+
 app.get('/users/:id', function (req, res) {
     console.log(req.params.id)
     res.json({
@@ -33,7 +41,7 @@ app.post('/login', function (req, res) {
     const mockUsername = "billyThekid";
     const mockPassword = "superSecret";
 
-    if (username == mockUsername && password == mockPassword) {
+    if (userName == mockUsername && password == mockPassword) {
         res.json({
             success: true,
             message: 'username and password matched!',
